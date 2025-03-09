@@ -8,11 +8,11 @@ const myIterable = {
         let last = this.to;
 
                 if(this.from > this.to) {
-                    alert("The first number is greater than the last one!")
+                    throw new Error("The first number is greater than the last one!")
                 } else if(this.from === undefined || this.to === undefined){
-                    alert('numbers not specified')
+                    throw new Error('numbers not specified')
                 } else if(typeof this.from !== "number" || typeof this.to !== "number"){
-                    alert('values are not numbers')
+                    throw new Error('values are not numbers')
                 }
 
                 return {
